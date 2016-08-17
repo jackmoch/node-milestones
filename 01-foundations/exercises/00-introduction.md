@@ -35,5 +35,12 @@ Note: the 'a' vs. 'an'
 ## Bonus
 
 -   Delay each line by 2 seconds
+-   Don't output anything if no names are passed (see below)
+
+Example:
+
+```bash
+$ node cheer.js
+```
 
 ## Additional Reading
