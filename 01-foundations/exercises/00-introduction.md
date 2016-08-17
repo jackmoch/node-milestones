@@ -20,13 +20,13 @@ Expected:
 
 ```bash
 $ node cheer.js John Doe
-Give me a J
-Give me an O
-Give me an H
-Give me an N
-Give me a D
-Give me an O
-Give me an E
+Give me a J!
+Give me an O!
+Give me an H!
+Give me an N!
+Give me a D!
+Give me an O!
+Give me an E!
 What does that spell?
 JOHN DOE!
 ```
