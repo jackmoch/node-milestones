@@ -15,13 +15,13 @@ TODO: Buffer objects
 
 ## Requirements
 
-Create a JavaScript file to act as a Node.js program named `09.js`. This program
+Create a JavaScript file to act as a Node.js program named `07.js`. This program
 should accept a single argument which should be a file path. Executing the
 program will print the contents of that file onto the terminal though the stdout
 stream. Executing the program without an argument should simply return without
 printing anything. This functionality to be similar to the `cat` command.
 
-Optional: create a second file named `09.json` for your program to read.
+Optional: create a second file named `07.json` for your program to read.
 
 Example:
 
