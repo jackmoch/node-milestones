@@ -1,8 +1,21 @@
 # Node cal
 
-Group Project
+Group TDD Project
 
 ## Requirements
+
+This project will be split into multiple parts
+
+* Integration tests
+* Zeller's module
+* Month module
+* Year module
+* Continuous integration
+* Code coverage
+* Web component
+
+The primary focus of this project is developing a test suite and thinking
+modularly, not the app logic itself.
 
 Expected:
 
