@@ -23,6 +23,8 @@ Start with a `createReadStream` and use event-stream's `split` and `map`
 methods. You will also create your own `Transform` stream stored as `limitTen`.
 This `Transform` should be a limiter before sending the results to stdout.
 
+Finally, make the `limitTen` stream its own module.
+
 ```js
 createReadStream(path)
     .pipe(?)
