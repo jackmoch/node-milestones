@@ -27,6 +27,7 @@ TODO: process.title
 TODO: process.exit and exit codes
 TODO: `npm link`
 TODO: export patterns, function, object, singleton caching
+TODO: multiple dice roll statistics (bell curve)
 
 ## Requirements
 
