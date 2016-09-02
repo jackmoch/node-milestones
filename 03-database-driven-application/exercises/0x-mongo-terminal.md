@@ -92,7 +92,8 @@ Create a markdown (.md) file where you can record the queries that return the re
 
 - List of stuff to query (approx 25)
 
-1. 
+1. Provide a query showing just the names and id's of the Italian restaurants.
+2. Provide a query
 
 ## Additional Reading
 
