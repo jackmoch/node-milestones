@@ -6,7 +6,7 @@
 
 ### Installation
 
-```Brew update``` and ```Brew install mongo``` should pretty much do it. ```npm install mongo-hacker``` can also be useful.
+```Brew update``` and ```Brew install mongo``` should pretty much do it. Then ```mkdir /data/db```. If you run into permissions problems, ```chmod 777 /data/db```. Sudo may be required. ```npm install mongo-hacker``` can also be useful.
 
 ### Documents and Collections
 
