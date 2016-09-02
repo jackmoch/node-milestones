@@ -30,6 +30,11 @@ The [.find()](https://docs.mongodb.com/manual/reference/method/db.collection.fin
 db.teachers.find({name: "Scott"}, {name: true})
 ```
 The query above returns the _id field and name. The _id is always returned unless specifically set to false.
+
+[Query operators](https://docs.mongodb.com/manual/reference/operator/query/) can be used to create more specific searches. For example:
+```
+db.teachers.find({$or:[{name: "Caitlin"}, {name: "Callan"}]}, {favoriteColor: true})
+```
 ### Updating Data
 
 The [.update()](https://docs.mongodb.com/manual/reference/method/db.collection.insert/) method accepts a query and a json object of information. BEWARE, if you do not use the ```$set``` query operator, the entire document will be replaced by the json you pass to the update().
@@ -55,3 +60,4 @@ Find out stuff using a database.
 -   [.insert()](https://docs.mongodb.com/manual/reference/method/db.collection.insert/)
 -   [.find()](https://docs.mongodb.com/manual/reference/method/db.collection.find/)
 -   [.update()](https://docs.mongodb.com/manual/reference/method/db.collection.insert/)
+-   [Query operators](https://docs.mongodb.com/manual/reference/operator/query/)
