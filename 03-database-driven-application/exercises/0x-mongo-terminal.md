@@ -82,7 +82,17 @@ Here's a neat [question](http://stackoverflow.com/questions/2298870/mongodb-get-
 
 ## Requirements
 
-Find out stuff using a database.
+- instructions for how to install shared db
+
+Import the sample dataset from mongoDB's [website](https://docs.mongodb.com/getting-started/shell/import-data/). This will import a database named "test" with a collection of "restaurants."
+
+- instructions for how to record queries 
+
+Create a markdown (.md) file where you can record the queries that return the requested information. You can then push the markdown file to github.
+
+- List of stuff to query (approx 25)
+
+1. 
 
 ## Additional Reading
 
