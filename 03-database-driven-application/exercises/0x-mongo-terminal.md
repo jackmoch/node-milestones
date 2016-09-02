@@ -35,11 +35,31 @@ The query above returns the _id field and name. The _id is always returned unles
 ```
 db.teachers.find({$or:[{name: "Caitlin"}, {name: "Callan"}]}, {favoriteColor: true})
 ```
+
+You can also use good old regex:
+```
+db.teachers.find({name: /^C/ }, {favoriteColor: true})
+```
 ### Updating Data
 
-The [.update()](https://docs.mongodb.com/manual/reference/method/db.collection.insert/) method accepts a query and a json object of information. BEWARE, if you do not use the ```$set``` query operator, the entire document will be replaced by the json you pass to the update().
+The [.update()](https://docs.mongodb.com/manual/reference/method/db.collection.insert/) method accepts a query and a json object of information. Beware, if you do not use a query operator, like ```$set```  the entire document will be replaced by the json you pass to the update(). For example:
+```
+db.teachers.update({name: "Scott"}, 
+                    {$set:{favoriteColor: "Green-ish"}})
+```
+
+The update method also includes an optional argument for options. "Upsert" will insert adocument if one does not already exist that matches the query parameters.
+
+```
+db.students.update( { name: "Jack"},
+                    { $set:{favoriteColor: "Gray"}}, 
+                    { upsert : true})
+```
 
 ### More Mongo
+
+Here's a neat [question](http://stackoverflow.com/questions/2298870/mongodb-get-names-of-all-keys-in-collection) on stackoverflow about how to get the names of all keys present in a collection.
+
 
 ## Topics Covered
 
@@ -56,7 +76,6 @@ Find out stuff using a database.
 ## Additional Reading
 
 -   [MongoDB](https://www.mongodb.com/)
--   [Keys](http://stackoverflow.com/questions/2298870/mongodb-get-names-of-all-keys-in-collection)
 -   [.insert()](https://docs.mongodb.com/manual/reference/method/db.collection.insert/)
 -   [.find()](https://docs.mongodb.com/manual/reference/method/db.collection.find/)
 -   [.update()](https://docs.mongodb.com/manual/reference/method/db.collection.insert/)
