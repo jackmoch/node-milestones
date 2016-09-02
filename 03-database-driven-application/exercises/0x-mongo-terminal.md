@@ -56,6 +56,15 @@ db.students.update( { name: "Jack"},
                     { upsert : true})
 ```
 
+###Deleting data
+
+The [.remove()](https://docs.mongodb.com/manual/reference/method/db.collection.remove/) method removes a documentfrom the collection. By default, .remove() will delete all documents that match the query parameter, unless you set the justOne option to true. For example:
+```
+db.students.remove( {name: "Dan"}, {justOne: true})
+```
+
+The [.drop()](https://docs.mongodb.com/manual/reference/method/db.collection.drop/) method takes no arguments and will drop the entire collection.
+
 ### More Mongo
 
 Here's a neat [question](http://stackoverflow.com/questions/2298870/mongodb-get-names-of-all-keys-in-collection) on stackoverflow about how to get the names of all keys present in a collection.
@@ -68,6 +77,8 @@ Here's a neat [question](http://stackoverflow.com/questions/2298870/mongodb-get-
 -   .insert()
 -   .find()
 -   .update()
+-   .remove()
+-   .drop()
 
 ## Requirements
 
@@ -80,3 +91,5 @@ Find out stuff using a database.
 -   [.find()](https://docs.mongodb.com/manual/reference/method/db.collection.find/)
 -   [.update()](https://docs.mongodb.com/manual/reference/method/db.collection.insert/)
 -   [Query operators](https://docs.mongodb.com/manual/reference/operator/query/)
+-   [.remove()](https://docs.mongodb.com/manual/reference/method/db.collection.remove/)
+-   [.drop()](https://docs.mongodb.com/manual/reference/method/db.collection.drop/)
