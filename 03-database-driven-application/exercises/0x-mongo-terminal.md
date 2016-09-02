@@ -14,7 +14,7 @@ In mongo, each database can be broken into multiple collections. For example, a 
 
 ### Inserting Data
 
-In order to [.insert()] data, make sure you ```use [name of database]```, then ```db.[name of collection].insesrt()``` and pass it the information you wish to insert in a json format. For example:
+In order to [insert](https://docs.mongodb.com/manual/reference/method/db.collection.insert/) data, make sure you ```use [name of database]```, then ```db.[name of collection].insesrt()``` and pass it the information you wish to insert in a json format. For example:
 ```
 use nssClass
 db.teachers.insert({
@@ -25,14 +25,14 @@ db.teachers.insert({
 
 ### Finding (Querying) data
 
-The [.find()] method takes two arguments, the query, which specifies which fields of the document to search, and the projection, which specifies which fields to display. For Example:
+The [.find()](https://docs.mongodb.com/manual/reference/method/db.collection.find/) method takes two arguments, the query, which specifies which fields of the document to search, and the projection, which specifies which fields to display. For Example:
 ```
 db.teachers.find({name: "Scott"}, {name: true})
 ```
 The query above returns the _id field and name. The _id is always returned unless specifically set to false.
 ### Updating Data
 
-The .update() method accepts a query and a json object of information. BEWARE, if you do not use the ```$set``` query operator, the entire document will be replaced by the json you pass to the update().
+The [.update()](https://docs.mongodb.com/manual/reference/method/db.collection.insert/) method accepts a query and a json object of information. BEWARE, if you do not use the ```$set``` query operator, the entire document will be replaced by the json you pass to the update().
 
 ### More Mongo
 
@@ -43,7 +43,6 @@ The .update() method accepts a query and a json object of information. BEWARE, i
 -   .insert()
 -   .find()
 -   .update()
--   Mongo Extras
 
 ## Requirements
 
