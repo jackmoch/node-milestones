@@ -14,9 +14,18 @@ In mongo, each database can be broken into multiple collections. For example, a 
 
 ### Inserting Data
 
-In order to insert data, make sure you ```use [name of database]```, then ```db.[name of collection].insesrt()``` and pass it the information you wish to insert in a json format.
+In order to insert data, make sure you ```use [name of database]```, then ```db.[name of collection].insesrt()``` and pass it the information you wish to insert in a json format. For example:
+```
+use nssClass
+db.teachers.insert({
+  name: "Scott",
+  likes: ["Moe's", "koala bears", "javaScript"]
+})
+```
 
 ### Finding (Querying) data
+
+The .find() method takes two arguments, the query, which specifies which fields of the document to search, and the projection, which specifies which fields to display.
 
 ### Updating Data
 
@@ -41,6 +50,6 @@ Find out stuff using a database.
 
 -   [MongoDB](https://www.mongodb.com/)
 -   [Keys](http://stackoverflow.com/questions/2298870/mongodb-get-names-of-all-keys-in-collection)
--   [Dolor](https://dolor.com/)
--   [Sit](https://sit.com/)
--   [Amet](https://amet.com/)
+-   [.insert()](https://docs.mongodb.com/manual/reference/method/db.collection.insert/)
+-   [.find()](https://docs.mongodb.com/manual/reference/method/db.collection.find/)
+-   [.update()](https://docs.mongodb.com/manual/reference/method/db.collection.insert/)
