@@ -6,7 +6,9 @@
 
 ### Installation
 
-`brew update` and `brew install mongodb` should pretty much do it. Then `mkdir /data/db`. If you run into permissions problems, `chmod 777 /data/db`. Sudo may be required. `npm install mongo-hacker` can also be useful.
+`brew update` and `brew install mongodb` should pretty much do it. Then `sudo mkdir -p /data/db` and `sudo chown -R $(whoami) /data`. `npm install mongo-hacker` can also be useful.
+
+`sudo mkdir -p /data/db` and `sudo chown -R $(whoami) /data`
 
 ### Documents and Collections
 
