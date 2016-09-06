@@ -101,7 +101,7 @@ Create a markdown (.md) file where you can record the queries that return the re
 7. Provide a query showing the oldest score from each restaurant.
 8. Provide a query showing the 5 pizza restaurants in the Bronx with the highest score on their most recent evaluation.
 9. Provide a query to find all of the restaurants in Brooklynn and list only the 21st-30th results.
-
+10. Provide a query that returns all pizza and Italian restaurants in reverse alphabetic order.
 
 
 ## Additional Reading
