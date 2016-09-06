@@ -6,7 +6,7 @@
 
 ### Installation
 
-```brew update``` and ```brew install mongo``` should pretty much do it. Then ```mkdir /data/db```. If you run into permissions problems, ```chmod 777 /data/db```. Sudo may be required. ```npm install mongo-hacker``` can also be useful.
+`brew update` and `brew install mongodb` should pretty much do it. Then `mkdir /data/db`. If you run into permissions problems, `chmod 777 /data/db`. Sudo may be required. `npm install mongo-hacker` can also be useful.
 
 ### Documents and Collections
 
@@ -14,54 +14,54 @@ In mongo, each database can be broken into multiple collections. For example, a 
 
 ### Inserting Data
 
-In order to [insert](https://docs.mongodb.com/manual/reference/method/db.collection.insert/) data, make sure you ```use [name of database]```, then ```db.[name of collection].insesrt()``` and pass it the information you wish to insert in a json format. For example:
-```
+In order to [insert](https://docs.mongodb.com/manual/reference/method/db.collection.insert/) data, make sure you `use [name of database]`, then `db.[name of collection].insesrt()` and pass it the information you wish to insert in a json format. For example:
+`
 use nssClass
 db.teachers.insert({
   name: "Scott",
   likes: ["Moe's", "koala bears", "javaScript"]
 })
-```
+`
 
 ### Finding (Querying) data
 
 The [.find()](https://docs.mongodb.com/manual/reference/method/db.collection.find/) method takes two arguments, the query, which specifies which fields of the document to search, and the projection, which specifies which fields to display. For Example:
-```
+`
 db.teachers.find({name: "Scott"}, {name: true})
-```
+`
 The query above returns the _id field and name. The _id is always returned unless specifically set to false.
 
 [Query operators](https://docs.mongodb.com/manual/reference/operator/query/) can be used to create more specific searches. For example:
-```
+`
 db.teachers.find({$or:[{name: "Caitlin"}, {name: "Callan"}]}, {favoriteColor: true})
-```
+`
 
 You can also use good old regex:
-```
+`
 db.teachers.find({name: /^C/ }, {favoriteColor: true})
-```
+`
 ### Updating Data
 
-The [.update()](https://docs.mongodb.com/manual/reference/method/db.collection.insert/) method accepts a query and a json object of information. Beware, if you do not use a query operator, like ```$set```  the entire document will be replaced by the json you pass to the update(). For example:
-```
+The [.update()](https://docs.mongodb.com/manual/reference/method/db.collection.insert/) method accepts a query and a json object of information. Beware, if you do not use a query operator, like `$set`  the entire document will be replaced by the json you pass to the update(). For example:
+`
 db.teachers.update({name: "Scott"}, 
                     {$set:{favoriteColor: "Green-ish"}})
-```
+`
 
 The update method also includes an optional argument for options. "Upsert" will insert adocument if one does not already exist that matches the query parameters.
 
-```
+`
 db.students.update( { name: "Jack"},
                     { $set:{favoriteColor: "Gray"}}, 
                     { upsert : true})
-```
+`
 
 ###Deleting data
 
 The [.remove()](https://docs.mongodb.com/manual/reference/method/db.collection.remove/) method removes a documentfrom the collection. By default, .remove() will delete all documents that match the query parameter, unless you set the justOne option to true. For example:
-```
+`
 db.students.remove( {name: "Dan"}, {justOne: true})
-```
+`
 
 The [.drop()](https://docs.mongodb.com/manual/reference/method/db.collection.drop/) method takes no arguments and will drop the entire collection.
 
