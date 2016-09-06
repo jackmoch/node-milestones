@@ -90,7 +90,7 @@ Import the sample dataset from mongoDB's [website](https://docs.mongodb.com/gett
 
 Create a markdown (.md) file where you can record the queries that return the requested information. You can then push the markdown file to github.
 
-- List of stuff to query (approx 25)
+Provide the following:
 
 1. Provide a query showing just the names (not id's) of the Italian restaurants.
 2. Provide a query showing how many Bakeries have a name that start with M.
