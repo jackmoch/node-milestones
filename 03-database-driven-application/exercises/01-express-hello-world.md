@@ -11,7 +11,7 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-    res.end('Hello World!')
+    res.send('Hello World!')
 })
 
 app.listen(3000)
@@ -40,6 +40,13 @@ app.on('request', (req, res) => {
 
 app.listen(3000)
 ```
+
+In the express route handler, it is recommended to use `res.send` rather than
+`res.end` if you are sending data. Only use `res.end` to quickly end a response
+stream without any data.
+
+[res.end](http://expressjs.com/en/api.html#res.end) vs.
+[res.send](http://expressjs.com/en/api.html#res.send)
 
 ## Requirements
 
