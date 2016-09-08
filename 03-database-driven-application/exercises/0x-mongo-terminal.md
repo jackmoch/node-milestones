@@ -6,9 +6,13 @@
 
 ### Installation
 
+##### On a Mac
 `brew update` and `brew install mongodb` should pretty much do it. Then `sudo mkdir -p /data/db` and `sudo chown -R $(whoami) /data`. `npm install mongo-hacker` can also be useful.
 
 `sudo mkdir -p /data/db` and `sudo chown -R $(whoami) /data`
+
+##### On other operating systems
+https://docs.mongodb.com/manual/administration/install-community/
 
 ### Documents and Collections
 
